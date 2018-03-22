@@ -1,0 +1,11 @@
+<category id="catThermistor" index="7">
+  <block type="variables_set">
+    <field name="VAR">thermistor</field>
+    <value name="VALUE">
+      <block type="thermistor_new"></block>
+    </value>
+  </block>
+  <block type="thermistor_detected"></block>
+  <block type="thermistor_val"></block>
+  <block type="thermistor_stop"></block>
+</category>

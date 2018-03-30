@@ -5,7 +5,7 @@
     "thermistor_val",
     "thermistor_stop"
   ],
-  "category": "catBoardGroup",
+  "category": "toolbox",
   "scripts": [
     "blockly/blocks.js",
     "blockly/javascript.js"

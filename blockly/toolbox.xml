@@ -1,4 +1,4 @@
-<category id="catThermistor" index="7">
+<category id="catThermistor" index="9">
   <block type="variables_set">
     <field name="VAR">thermistor</field>
     <value name="VALUE">

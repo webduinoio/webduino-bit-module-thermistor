@@ -1,5 +1,5 @@
 Blockly.JavaScript['thermistor_new'] = function (block) {
-  var code = 'getThermistor(board, 7)';
+  var code = 'getThermistor(board, 6)';
   return [code, Blockly.JavaScript.ORDER_ATOMIC];
 };
 

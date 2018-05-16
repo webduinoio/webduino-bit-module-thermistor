@@ -52,6 +52,7 @@
     var maxRawData = 1;
     var diffData = maxTemperature - minTemperature;
 
+    this._board.getPin(34).setMode(2);
     this._board.enableAnalogPin(this._pinNumber);
 
     if (typeof callback !== 'function') {
@@ -72,7 +73,7 @@
     this._state = 'off';
     this._board.disableAnalogPin(this._pinNumber);
     this._board.removeListener(BoardEvent.ANALOG_DATA, this._messageHandler);
-    this.removeListener(ThermistorEvent.MESSAGE, this._callback);
+    this.removeListener(ThermistorEvent.MESSAGE, this._callback || function () { });
     this._callback = null;
   };
 

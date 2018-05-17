@@ -52,7 +52,6 @@
     var maxRawData = 1;
     var diffData = maxTemperature - minTemperature;
 
-    this._board.getPin(34).setMode(2);
     this._board.enableAnalogPin(this._pinNumber);
 
     if (typeof callback !== 'function') {

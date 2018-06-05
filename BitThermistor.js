@@ -46,10 +46,6 @@
 
   proto.measure = function (callback) {
     var _this = this;
-    var minTemperature = -10;
-    var maxTemperature = 120;
-    var PARAMETER = 2.03; // 數值轉換參數
-    var diffData = maxTemperature - minTemperature;
 
     this._board.enableAnalogPin(this._pinNumber);
 
@@ -58,8 +54,7 @@
     }
 
     this._callback = function (val) {
-      var ratio = val / PARAMETER;
-      callback(diffData * ratio);
+      callback(_this.parserVal(val));
     };
 
     this._state = 'on';
@@ -73,6 +68,13 @@
     this._board.removeListener(BoardEvent.ANALOG_DATA, this._messageHandler);
     this.removeListener(ThermistorEvent.MESSAGE, this._callback || function () { });
     this._callback = null;
+  };
+
+  proto.parserVal = function (val) {
+    var PARAMETER = 64.039;
+    var newVal = val * PARAMETER;
+    newVal = Math.round(newVal * 100) / 100;
+    return newVal;
   };
 
   scope.module.Thermistor = Thermistor;

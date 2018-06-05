@@ -48,8 +48,7 @@
     var _this = this;
     var minTemperature = -10;
     var maxTemperature = 120;
-    var minRawData = 0;
-    var maxRawData = 1;
+    var PARAMETER = 2.03; // 數值轉換參數
     var diffData = maxTemperature - minTemperature;
 
     this._board.enableAnalogPin(this._pinNumber);
@@ -59,7 +58,7 @@
     }
 
     this._callback = function (val) {
-      var ratio = val / (maxRawData - minRawData);
+      var ratio = val / PARAMETER;
       callback(diffData * ratio);
     };
 

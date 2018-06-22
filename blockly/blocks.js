@@ -4,11 +4,23 @@ var utmUrl = '?utm_source=cloud-blockly&utm_medium=contextMenu&utm_campaign=tuto
 Blockly.Blocks['thermistor_new'] = {
   init: function () {
     this.appendDummyInput()
-        .appendField(Blockly.Msg.WEBDUINO_THERMISTOR);
+        .appendField(Blockly.Msg.WEBDUINO_THERMISTOR, "name_");
     this.setOutput(true);
     this.setColour(230);
     this.setTooltip('');
     this.setHelpUrl('');
+  }
+};
+
+Blockly.Blocks['thermistor_pin_get'] = {
+  init: function () {
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.WEBDUINO_THERMISTOR_PIN, "Pin")
+      .appendField(new Blockly.FieldDropdown([['A4','4'],['A5','5'],['A6','6'],['A7','7']]), "pin_");
+    this.setOutput(true);
+    this.setColour(270);
+    this.setTooltip('');
+    this.setHelpUrl(mainUrl + 'basic/blockly/board-pin.html' + utmUrl);
   }
 };
 

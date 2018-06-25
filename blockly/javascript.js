@@ -3,6 +3,12 @@ Blockly.JavaScript['thermistor_new'] = function (block) {
   return [code, Blockly.JavaScript.ORDER_ATOMIC];
 };
 
+Blockly.JavaScript['thermistor_pin_get'] = function (block) {
+  var dropdown_pin_ = block.getFieldValue('pin_');
+  var code = 'getThermistor(board, '+dropdown_pin_+')';
+  return [code, Blockly.JavaScript.ORDER_ATOMIC];
+};
+
 Blockly.JavaScript['thermistor_detected'] = function (block) {
   var variable_name_ = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('name_'), Blockly.Variables.NAME_TYPE);
   var statements_detected_ = Blockly.JavaScript.statementToCode(block, 'detected_');

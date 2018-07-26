@@ -1,6 +1,6 @@
 {
   "name": "webduino-bit-module-thermistor",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Thermistor Module for Webduino Bit",
   "repository": "https://github.com/webduinoio/webduino-bit-module-thermistor.git",
   "homepage": "https://webduino.io",

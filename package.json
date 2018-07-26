@@ -4,7 +4,7 @@
   "description": "Thermistor Module for Webduino Bit",
   "repository": "https://github.com/webduinoio/webduino-bit-module-thermistor.git",
   "homepage": "https://webduino.io",
-  "main": "BitThermistor.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

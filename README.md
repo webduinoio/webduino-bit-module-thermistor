@@ -1,18 +1,23 @@
 # webduino-bit-module-thermistor
 
-Module for Webduino:bit Thermistor.
+Module for thermistor of Webduino:bit.
 
 ## Installation
+
 #### bower
+
 ```sh
 bower install https://github.com/webduinoio/webduino-bit-module-thermistor.git
 ```
+
 #### Node.js
+
 ```sh
 $ npm install webduino-bit-module-thermistor
 ```
 
 ## Usage
+
 ```javascript
 let webduino = require('webduino-js');
 require('webduino-bit-module-thermistor')(webduino);

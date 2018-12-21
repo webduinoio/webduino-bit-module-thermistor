@@ -71,6 +71,7 @@
   };
 
   proto.parserVal = function (val) {
+    val = Math.round(val * 1000) / 1000;
     var PARAMETER = 64.039;
     var newVal = val * PARAMETER;
     newVal = Math.round(newVal * 100) / 100;

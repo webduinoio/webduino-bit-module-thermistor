@@ -1,1 +1,1 @@
-MSG.catThermistor = "Thermistor";
+MSG.catThermistor_bit = "Thermistor";

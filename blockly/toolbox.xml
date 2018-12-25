@@ -1,14 +1,14 @@
-<category id="catThermistor" index="9">
+<category id="catThermistor_bit" index="9" tags="bit">
   <block type="variables_set">
     <field name="VAR">thermistor</field>
     <value name="VALUE">
-      <block type="thermistor_new"></block>
+      <block type="thermistor_new_bit" tags="bit"></block>
     </value>
   </block>
   <block type="variables_set">
     <field name="VAR">thermistor</field>
     <value name="VALUE">
-      <block type="thermistor_pin_get">
+      <block type="thermistor_pin_get" tags="bit">
         <value name="pin">
           <block type="pin_num">
             <field name="pin_">10</field>

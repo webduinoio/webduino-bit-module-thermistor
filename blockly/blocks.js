@@ -1,10 +1,10 @@
 var mainUrl = 'https://tutorials.webduino.io/zh-tw/docs/';
 var utmUrl = '?utm_source=cloud-blockly&utm_medium=contextMenu&utm_campaign=tutorials';
 
-Blockly.Blocks['thermistor_new'] = {
+Blockly.Blocks['thermistor_new_bit'] = {
   init: function () {
     this.appendDummyInput()
-        .appendField(Blockly.Msg.WEBDUINO_THERMISTOR, "name_");
+        .appendField(Blockly.Msg.WEBDUINO_THERMISTOR_BIT, "name_");
     this.setOutput(true);
     this.setColour(230);
     this.setTooltip('');

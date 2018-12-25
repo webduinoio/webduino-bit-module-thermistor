@@ -1,1 +1,1 @@
-MSG.catThermistor = "熱敏電阻";
+MSG.catThermistor_bit = "熱敏電阻";

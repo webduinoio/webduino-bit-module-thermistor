@@ -1,11 +1,11 @@
 {
   "types": [
-    "thermistor_new",
+    "thermistor_new_bit",
     "thermistor_detected",
     "thermistor_val",
     "thermistor_stop"
   ],
-  "category": "toolbox",
+  "category": "catMenu3",
   "scripts": [
     "blockly/blocks.js",
     "blockly/javascript.js"

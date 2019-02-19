@@ -70,12 +70,20 @@
     this._callback = null;
   };
 
+  /**
+   * https://github.com/BPI-STEAM/BPI-BIT-Arduino-IDE/tree/master/example/Temperature
+   */
   proto.parserVal = function (val) {
-    val = Math.round(val * 1000) / 1000;
-    var PARAMETER = 64.039;
-    var newVal = val * PARAMETER;
-    newVal = Math.round(newVal * 100) / 100;
-    return newVal;
+    var voltagePower = 3.3;
+    var Rs = 5.1;           // Sampling Resistance is 5.1K ohm
+    var B = 3950;
+    var T = 273.15 + 25;    // Normal Temperature Parameters 
+    var R1 = 10;            // Normal Temperature Resistance (K ohm)
+
+    var voltageValue = val * voltagePower;
+    var Rt = ((voltagePower - voltageValue) * Rs) / voltageValue;
+    var newVal = ((T * B) / (B + T * Math.log10(Rt / R1))) - 273.15;
+    return Math.round(newVal * 100) / 100;
   };
 
   scope.module.Thermistor = Thermistor;
